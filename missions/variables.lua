@@ -68,7 +68,7 @@ function test_boolean_type()
 end
 
 function test_table_type()
-  assert_equal(__, type({})) -- 
+  assert_equal(__, type({})) --
   -- there's lots to be learned about tables in tables.lua
 end
 

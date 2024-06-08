@@ -50,14 +50,14 @@ end
 
 function test_index_also_works_on_integer_keys()
   local doubler = setmetatable({}, { __index = function (t, key) return key * 2 end })
-  assert_equal(__, doubler[24]) 
+  assert_equal(__, doubler[24])
 end
 
 function test_newindex_metamethod_is_invoked_when_a_new_value_is_inserted_in_a_table()
-  
+
   local t1 = {}
-  
-  local t2 = setmetatable({}, { 
+
+  local t2 = setmetatable({}, {
     __newindex = function(t, key, value)
       t1[key] = value * 10
     end
@@ -77,8 +77,8 @@ function test_newindex_syntactic_sugar_for_tables()
 end
 
 function test_rawset_allows_modifying_tables_without_invoking_newindex()
-  
-  local clock = setmetatable({}, { 
+
+  local clock = setmetatable({}, {
     __newindex = function(t, key, value)
       if key == 'hours' then
         rawset(t, 'seconds', value * 3600)

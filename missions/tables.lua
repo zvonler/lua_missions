@@ -7,12 +7,12 @@ local unpack = _G.unpack or table.unpack
 
 function test_creating_empty_tables()
   local empty_table = {}
-  assert_equal( __, type(empty_table))
+  assert_equal(__, type(empty_table))
 end
 
 function test_empty_tables_return_nil_when_indexed()
   local empty_table = {}
-  assert_equal( __, empty_table[1])
+  assert_equal(__, empty_table[1])
 end
 
 function test_table_modifications()
@@ -61,7 +61,7 @@ end
 
 function test_the_default_table_table()
   -- there's a table called "table". It has functions for table manipulation inside
-  assert_equal( __, type(table))
+  assert_equal(__, type(table))
 end
 
 function test_table_insert()
@@ -102,13 +102,13 @@ end
 
 function test_table_length()
   local a = { 1, 2, 3 }
-  assert_equal( __, #a)
+  assert_equal(__, #a)
 end
 
 function test_table_length_only_takes_into_account_consecutive_numbers()
   local t = { 1, 2, 3 }
   t[1000] = 1000
-  assert_equal( __, #t)
+  assert_equal(__, #t)
 end
 
 function test_using_string_as_keys()
@@ -134,7 +134,7 @@ function test_creating_an_inline_mixed_table()
   assert_equal(__, t.foo)
 end
 
-function test_non_numberic_keys_are_ignored_by_table_length()
+function test_non_numeric_keys_are_ignored_by_table_length()
   local t = { 1,2, hi = 'hello' }
   assert_equal(__, #t)
 end
@@ -146,7 +146,7 @@ end
 
 function test_using_tables_as_keys()
   local hi = { 1, 2, 3 }
-  local you = { 4, 5, 6 } 
+  local you = { 4, 5, 6 }
   local t = { [hi] = 'hello' }
   t[you] = 'world'
   assert_equal(__, t[hi])

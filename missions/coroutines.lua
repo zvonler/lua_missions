@@ -16,7 +16,7 @@ function test_table_coroutine_contains_six_or_seven_elements()
   if lua_greater_or_equal_5_4() then
     -- if you are on Lua >=5.4
     assert_equal(__, counter)
-  else if lua_greater_or_equal_5_3() then
+  elseif lua_greater_or_equal_5_3() then
     -- if you are on Lua 5.3
     assert_equal(__, counter)
   else
@@ -136,11 +136,11 @@ function test_coroutine_running_returns_current_coroutine()
   if lua_greater_or_equal_5_2() then
     assert_equal(__, type(val1))
     assert_equal(__, type(val2))
-    assert_equal(__,  val1 == val2)
+    assert_equal(__, val1 == val2)
     assert_equal(__, val1 == val3)
     assert_equal(__, val3 == cor)
   else
-  -- In Lua 5.1 and LuaJIT, there is no "main coroutine", to coroutine.running can return nil
+  -- In Lua 5.1 and LuaJIT, there is no "main coroutine", so coroutine.running can return nil
     assert_equal(__, type(val1))
     assert_equal(__, type(val2))
     assert_equal(__, val1 == val2)

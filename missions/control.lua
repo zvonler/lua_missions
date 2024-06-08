@@ -37,8 +37,8 @@ function test_if_not_statement()
 end
 
 function test_and_or_expression()
-  assert_equal( __,  (true and 'true value' or 'false value') )
-  assert_equal( __, (false and 'true value' or 'false value') )
+  assert_equal(__,  (true and 'true value' or 'false value') )
+  assert_equal(__, (false and 'true value' or 'false value') )
 end
 
 function test_while()
