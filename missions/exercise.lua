@@ -9,6 +9,15 @@
 
 -- INSERT YOUR CODE HERE
 
+string.starts_with = function(self, prefix)
+    if #prefix == 0 then return true end
+    return string.sub(self, 1, 1 + #prefix - 1) == prefix
+end
+
+string.ends_with = function(self, suffix)
+    if #suffix == 0 then return true end
+    return string.sub(self, #self - #suffix + 1) == suffix
+end
 
 -- END OF CODE INSERT
 
